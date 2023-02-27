@@ -1,7 +1,5 @@
 package utils;
 
-import java.time.Duration;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +8,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class ElementUtils {
 	
@@ -42,7 +42,7 @@ public class ElementUtils {
 		WebElement webElement = null;
 		
 		try {
-			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(durationInSeconds));
+			WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(durationInSeconds));
 			webElement = wait.until(ExpectedConditions.elementToBeClickable(element));
 		}catch(Throwable e) {
 			e.printStackTrace();
@@ -79,7 +79,7 @@ public class ElementUtils {
 		Alert alert = null;
 		
 		try {
-			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(durationInSeconds));
+			WebDriverWait wait = new WebDriverWait(driver,TimeUnit.SECONDS.toSeconds(durationInSeconds));
 			alert = wait.until(ExpectedConditions.alertIsPresent());
 		}catch(Throwable e) {
 			e.printStackTrace();
@@ -102,7 +102,7 @@ public class ElementUtils {
 		WebElement webElement = null;
 		
 		try {
-			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(durationInSeconds));
+			WebDriverWait wait = new WebDriverWait(driver,TimeUnit.SECONDS.toSeconds(durationInSeconds));
 			webElement = wait.until(ExpectedConditions.visibilityOf(element));
 		}catch(Throwable e) {
 			e.printStackTrace();
