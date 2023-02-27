@@ -35,7 +35,7 @@ Feature: Login functionality
 
   Scenario: Login without providing any credentials
     Given User navigates to login page
-    When User dont enter email address into email field
-    And User dont enter password into password field
+    When User don't enter email address into email field
+    And User don't enter password into password field
     And User clicks on Login button
     Then User should get a proper warning message about credentials mismatch
