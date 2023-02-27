@@ -96,8 +96,8 @@ public class Register {
 		
 	}
 
-	@When("User dont enter any details into fields")
-	public void user_dont_enter_any_details_into_fields() {
+	@When("User don't enter any details into fields")
+	public void user_don_t_enter_any_details_into_fields() {
 		
 		registerPage.enterFirstName("");
 		registerPage.enterLastName("");
@@ -107,7 +107,6 @@ public class Register {
 		registerPage.enterConfirmPassword("");
 	    
 	}
-
 	@Then("User should get proper warning messages for every mandatory field")
 	public void user_should_get_proper_warning_messages_for_every_mandatory_field() {
 	    
