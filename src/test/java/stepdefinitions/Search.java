@@ -60,8 +60,8 @@ public class Search {
 		
 	}
 
-	@When("User dont enter any product name into Search box field")
-	public void user_dont_enter_any_product_name_into_search_box_field() {
+	@When("User don't enter any product name into Search box field")
+	public void user_don_t_enter_any_product_name_into_search_box_field() {
 	   
 		homePage = new HomePage(driver);
 		
