@@ -81,15 +81,15 @@ public class Login {
 		
 	}
 
-	@When("User dont enter email address into email field")
-	public void user_dont_enter_email_address_into_email_field() {
+	@When("User don't enter email address into email field")
+	public void user_don_t_enter_email_address_into_email_field() {
 		
 		loginPage.enterEmailAddress("");
 	    
 	}
 
-	@When("User dont enter password into password field")
-	public void user_dont_enter_password_into_password_field() {
+	@When("User don't enter password into password field")
+	public void user_don_t_enter_password_into_password_field() {
 	    
 		loginPage.enterPassword("");
 		
